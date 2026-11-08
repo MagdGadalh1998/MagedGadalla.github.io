@@ -17,6 +17,60 @@
       { "group": "Tools & Optimization", "items": ["Git", "GitLab", "Plastic SCM", "SourceTree", "Profiling", "Memory Management"] }
     ]
   },
+  "experience": [
+    {
+      "company": "ArabTesting",
+      "role": "Unity Developer",
+      "period": "Nov 2025 – Present",
+      "location": "Cairo, Egypt",
+      "points": [
+        "Architect VR and MR simulations on the Meta XR All-in-One SDK",
+        "Strategy and Command patterns with a hierarchical state machine and undo/redo",
+        "Meta Voice SDK with bilingual Arabic and English voice detection",
+        "Profiling and memory work for stable frame rates on Quest 2 and Quest 3"
+      ]
+    },
+    {
+      "company": "Almotahida Education Group",
+      "role": "Unity Developer",
+      "period": "Feb 2023 – Nov 2025",
+      "location": "Cairo, Egypt",
+      "points": [
+        "Full development cycle for VR apps and 2D/3D educational games",
+        "Reusable systems and scenarios across platforms",
+        "Profiling and debugging with QA across 2D, 3D and VR"
+      ]
+    },
+    {
+      "company": "Lessonaira",
+      "role": "Unity Developer (part-time)",
+      "period": "May 2022 – Aug 2022",
+      "location": "",
+      "points": [
+        "Battle Royale systems and real-time player synchronization",
+        "REST APIs for dynamic game data",
+        "OAuth 2.0 login with Google and Facebook"
+      ]
+    },
+    {
+      "company": "FutureCORE",
+      "role": "Unity Developer",
+      "period": "Feb 2022 – Feb 2023",
+      "location": "Cairo, Egypt",
+      "points": [
+        "Core architecture for a real-time farming simulation",
+        "Custom API syncing progression, inventory and game state",
+        "Scene layout and level design for better rendering performance"
+      ]
+    }
+  ],
+  "certificates": [
+    { "name": "Certified Unity Professional", "issuer": "Unity Technologies", "year": "2022 – 2023" },
+    { "name": "Unity Certified Associate: Game Developer, Scripting with C#", "issuer": "", "year": "2020" },
+    { "name": "Complete C# Unity Game Developer (2D-3D)", "issuer": "Udacity", "year": "2019" },
+    { "name": "VR Mobile 360 Development Nanodegree", "issuer": "", "year": "2019" },
+    { "name": "VR Development Nanodegree", "issuer": "Udacity", "year": "2018" }
+  ],
   "projects": [
     {
       "title": "VR Space Simulation",
