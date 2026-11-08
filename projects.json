@@ -1,0 +1,92 @@
+{
+  "profile": {
+    "name": "Maged Gadalla",
+    "title": "Senior Unity & XR Developer",
+    "tagline": "VR / AR / MR simulations, real-time multiplayer and educational games",
+    "about": "Unity & XR software engineer with 4+ years of experience designing and shipping interactive simulations, real-time networking systems and multiplayer games. I focus on clean architecture, design patterns and stable performance on standalone headsets such as Meta Quest 2 and Quest 3.",
+    "email": "Magdgadalh1998@gmail.com",
+    "links": [
+      { "label": "YouTube", "url": "https://www.youtube.com/@magdgadalh9148" },
+      { "label": "LinkedIn", "url": "" },
+      { "label": "GitHub", "url": "" }
+    ],
+    "skills": [
+      { "group": "Engine & XR", "items": ["Unity 2D/3D", "XR (VR/AR/MR)", "Meta XR SDK", "Meta Voice SDK", "AR Foundation", "XR Interaction Toolkit"] },
+      { "group": "Programming", "items": ["C#", ".NET", "OOP", "SOLID", "Design Patterns"] },
+      { "group": "Networking", "items": ["Photon PUN 2", "Photon Fusion", "RPC Synchronization", "REST APIs", "OAuth 2.0"] },
+      { "group": "Tools & Optimization", "items": ["Git", "GitLab", "Plastic SCM", "SourceTree", "Profiling", "Memory Management"] }
+    ]
+  },
+  "projects": [
+    {
+      "title": "VR Space Simulation",
+      "company": "ArabTesting",
+      "period": "2025 – Present",
+      "summary": "Decoupled vehicle control system that separates input execution from locomotion behaviors, enabling several navigation methods in one simulation.",
+      "role": "Architecture and development",
+      "tech": ["Unity", "Meta XR SDK", "Strategy Pattern", "Quest 2/3"],
+      "video": "",
+      "links": []
+    },
+    {
+      "title": "Core Gameplay System: Command Pattern + State Machine",
+      "company": "ArabTesting",
+      "period": "2025 – Present",
+      "summary": "Scalable gameplay core built on a custom Command Pattern and hierarchical state machine, with global state management and precise undo/redo.",
+      "role": "Architecture and development",
+      "tech": ["C#", "Command Pattern", "State Machine"],
+      "video": "",
+      "links": []
+    },
+    {
+      "title": "Mixed Reality Voice Interaction",
+      "company": "ArabTesting",
+      "period": "2025 – Present",
+      "summary": "Low-latency, voice-driven Mixed Reality interactions with optimized NLP models for bilingual Arabic and English voice detection.",
+      "role": "Integration and development",
+      "tech": ["Meta Voice SDK", "Mixed Reality", "NLP"],
+      "video": "",
+      "links": []
+    },
+    {
+      "title": "Immersive VR & Educational Games",
+      "company": "Almotahida Education Group",
+      "period": "2023 – 2025",
+      "summary": "Full development cycle for VR applications and 2D/3D educational games, with reusable systems and pedagogical scenarios across platforms.",
+      "role": "Unity Developer",
+      "tech": ["Unity", "C#", "VR", "2D/3D"],
+      "video": "",
+      "links": []
+    },
+    {
+      "title": "Educational Battle Royale (Multiplayer)",
+      "company": "Lessonaira",
+      "period": "2022",
+      "summary": "Core gameplay and real-time player synchronization for a large multiplayer educational game, with REST API data and Google/Facebook login via OAuth 2.0.",
+      "role": "Unity Developer (part-time)",
+      "tech": ["Unity", "Multiplayer", "REST", "OAuth 2.0"],
+      "video": "",
+      "links": []
+    },
+    {
+      "title": "Farming Simulation Game",
+      "company": "FutureCORE",
+      "period": "2022 – 2023",
+      "summary": "Core architecture for a real-time farming simulation with resource states and time-based mechanics, synced to a backend through a custom API.",
+      "role": "Unity Developer",
+      "tech": ["Unity", "C#", "Backend API", "Level Design"],
+      "video": "",
+      "links": []
+    },
+    {
+      "title": "Multi Tour (Graduation Project)",
+      "company": "Benha University",
+      "period": "2020",
+      "summary": "Real-time multiplayer VR tourism simulation game. Graded Excellent.",
+      "role": "Developer",
+      "tech": ["Unity", "VR", "Multiplayer"],
+      "video": "",
+      "links": []
+    }
+  ]
+}

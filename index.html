@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maged Gadalla – Unity & XR Developer</title>
+<meta name="description" content="Portfolio of Maged Gadalla, Senior Unity & XR developer.">
+<style>
+:root{--bg:#fff;--fg:#14171f;--mut:#5b6472;--card:#f4f6fa;--bd:#e2e6ee;--acc:#2f6bff}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1117;--fg:#e8ecf4;--mut:#9aa4b5;--card:#171c26;--bd:#262d3b;--acc:#6b95ff}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{padding:64px 0 32px}
+h1{font-size:clamp(2rem,6vw,3.2rem);margin:0;line-height:1.1}
+.role{color:var(--acc);font-weight:600;font-size:1.2rem;margin:.4rem 0 0}
+.tag{color:var(--mut);margin:.3rem 0 1.2rem}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{padding:8px 16px;border:1px solid var(--bd);border-radius:999px;color:var(--fg);text-decoration:none;font-weight:500}
+.links a:hover{border-color:var(--acc);color:var(--acc)}
+section{padding:28px 0}
+h2{font-size:1.5rem;margin:0 0 16px}
+#about{max-width:720px;color:var(--mut);margin:0}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.sk{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}
+.sk h3{margin:0 0 10px;font-size:1rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:.8rem;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--bd);color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.media{aspect-ratio:16/9;background:#000;position:relative}
+.media button,.media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.media button{background-size:cover;background-position:center;cursor:pointer}
+.media button i{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(0,0,0,.65)}
+.media button i::after{content:"";position:absolute;left:25px;top:19px;border-left:20px solid #fff;border-top:13px solid transparent;border-bottom:13px solid transparent}
+.soon{height:100%;display:flex;align-items:center;justify-content:center;color:#8b93a3;font-size:.9rem;background:linear-gradient(135deg,#1b2233,#10141d)}
+.body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.body h3{margin:0;font-size:1.1rem}
+.body p{margin:0}
+.meta{color:var(--mut);font-size:.85rem}
+.pl{display:flex;gap:12px;flex-wrap:wrap}
+.pl a{color:var(--acc);font-weight:600;text-decoration:none}
+footer{padding:40px 0 60px;color:var(--mut);font-size:.9rem;border-top:1px solid var(--bd);margin-top:30px}
+.err{color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 id="name">Maged Gadalla</h1>
+    <p class="role" id="role"></p>
+    <p class="tag" id="tag"></p>
+    <nav class="links" id="links"></nav>
+  </header>
+  <main>
+    <section><h2>About</h2><p id="about"></p></section>
+    <section><h2>Skills</h2><div class="skills" id="skills"></div></section>
+    <section><h2>Projects</h2><div class="grid" id="projects"></div></section>
+  </main>
+  <footer id="foot"></footer>
+</div>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const chips = a => (a || []).map(t => `<span>${esc(t)}</span>`).join("");
+const safeUrl = u => /^https?:\/\//i.test(u || "");
+
+fetch("projects.json")
+  .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+  .then(render)
+  .catch(() => {
+    $("#projects").innerHTML = '<p class="err">Could not load projects.json. Open the site through GitHub Pages or a local server (not by double-clicking the file).</p>';
+  });
+
+function render(d) {
+  const p = d.profile || {};
+  document.title = (p.name || "") + " – " + (p.title || "");
+  $("#name").textContent = p.name || "";
+  $("#role").textContent = p.title || "";
+  $("#tag").textContent = p.tagline || "";
+  $("#about").textContent = p.about || "";
+
+  const links = (p.links || []).filter(l => safeUrl(l.url));
+  if (p.email) links.push({ label: "Email", url: "mailto:" + p.email });
+  $("#links").innerHTML = links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("");
+
+  $("#skills").innerHTML = (p.skills || []).map(g =>
+    `<div class="sk"><h3>${esc(g.group)}</h3><div class="chips">${chips(g.items)}</div></div>`).join("");
+
+  $("#projects").innerHTML = (d.projects || []).map(x => {
+    const media = x.video
+      ? `<button aria-label="Play ${esc(x.title)}" style="background-image:url(https://i.ytimg.com/vi/${esc(x.video)}/hqdefault.jpg)"><i></i></button>`
+      : `<div class="soon">Demo video coming soon</div>`;
+    const pl = (x.links || []).filter(l => safeUrl(l.url))
+      .map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("");
+    return `<article class="card">
+      <div class="media" data-v="${esc(x.video || "")}">${media}</div>
+      <div class="body">
+        <h3>${esc(x.title)}</h3>
+        <p class="meta">${esc([x.company, x.period].filter(Boolean).join(" · "))}</p>
+        <p>${esc(x.summary)}</p>
+        <p class="meta"><b>Role:</b> ${esc(x.role)}</p>
+        <div class="chips">${chips(x.tech)}</div>
+        ${pl ? `<div class="pl">${pl}</div>` : ""}
+      </div></article>`;
+  }).join("");
+
+  document.querySelectorAll(".media[data-v]").forEach(m => {
+    const v = m.dataset.v, b = m.querySelector("button");
+    if (v && b) b.onclick = () => {
+      m.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(v)}?autoplay=1" title="Project video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+    };
+  });
+
+  $("#foot").textContent = "© " + new Date().getFullYear() + " " + (p.name || "");
+}
+</script>
+</body>
+</html>
