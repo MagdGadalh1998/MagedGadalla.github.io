@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maged Gadalla – Senior Unity & XR Developer</title>
+<meta name="description" content="Portfolio of Maged Gadalla, Senior Unity & XR developer specializing in VR, MR, and multiplayer simulations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<script>
+  try {
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  } catch(e) {
+    document.documentElement.dataset.theme = "dark";
+  }
+</script>
+<style>
+:root {
+  --bg: #09090b;
+  --bg-subtle: #121215;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-hover-border: rgba(255, 255, 255, 0.2);
+  --fg: #f4f4f5;
+  --mut: #a1a1aa;
+  --mut-extra: #71717a;
+  --acc: #6366f1;
+  --acc-glow: rgba(99, 102, 241, 0.25);
+  --sig: #f59e0b;
+  --badge-bg: rgba(255, 255, 255, 0.05);
+  --hd: "Syne", sans-serif;
+  --bd: "Plus Jakarta Sans", sans-serif;
+  --radius: 20px;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root[data-theme="light"] {
+  --bg: #fafafa;
+  --bg-subtle: #f4f4f5;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-hover-border: rgba(0, 0, 0, 0.2);
+  --fg: #09090b;
+  --mut: #52525b;
+  --mut-extra: #a1a1aa;
+  --acc: #4f46e5;
+  --acc-glow: rgba(79, 70, 229, 0.15);
+  --sig: #d97706;
+  --badge-bg: rgba(0, 0, 0, 0.04);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 1rem/1.6 var(--bd);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+
+/* Grid Background Effect */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(var(--card-border) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header & Nav */
+header.nav-header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: min(90%, 720px);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.brand {
+  font: 700 1rem var(--hd);
+  letter-spacing: -0.02em;
+  padding: 4px 12px;
+}
+
+.nl { display: flex; gap: 8px; align-items: center; }
+.nl a {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--mut);
+  border-radius: 999px;
+  transition: var(--transition);
+}
+.nl a:hover, nav a[aria-current] { color: var(--fg); background: var(--badge-bg); }
+
+.tb {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--fg);
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+.tb:hover { border-color: var(--card-hover-border); }
+
+/* Hero Section (Sawad Style) */
+.hero {
+  padding: 160px 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--badge-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--sig);
+  margin-bottom: 24px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sig);
+  box-shadow: 0 0 10px var(--sig);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+h1.hero-title {
+  font: 800 clamp(2.8rem, 6vw, 4.5rem)/1.1 var(--hd);
+  letter-spacing: -0.03em;
+  margin: 0 0 20px;
+  background: linear-gradient(135deg, var(--fg) 40%, var(--mut));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.role-tag {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 600;
+  color: var(--acc);
+  margin-bottom: 16px;
+}
+
+.hero-bio {
+  max-width: 620px;
+  font-size: 1.15rem;
+  color: var(--mut);
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: var(--fg);
+  color: var(--bg);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.btn-primary:hover { transform: translateY(-2px); opacity: 0.9; }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--fg);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+.btn-secondary:hover { border-color: var(--card-hover-border); transform: translateY(-2px); }
+
+/* Main Section Styling */
+section { padding: 60px 0; }
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+h2.section-title {
+  font: 700 clamp(1.6rem, 3vw, 2.2rem) var(--hd);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Projects Showcase (Framed Cards) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 540px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
+
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+.project-card:hover {
+  border-color: var(--card-hover-border);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--bg-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.project-card:hover .project-thumb img { transform: scale(1.04); }
+
+.project-thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mut-extra);
+  font-size: 0.9rem;
+  background: repeating-linear-gradient(45deg, var(--bg-subtle), var(--bg-subtle) 10px, var(--card-bg) 10px, var(--card-bg) 20px);
+}
+
+.play-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.project-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.project-company { font-size: 0.85rem; font-weight: 700; color: var(--acc); }
+.project-period { font-size: 0.8rem; color: var(--mut-extra); }
+
+.project-title {
+  font: 700 1.3rem var(--hd);
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+
+.project-desc {
+  color: var(--mut);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.tag-item {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--badge-bg);
+  border: 1px solid var(--card-border);
+  color: var(--mut);
+}
+
+/* Filter Controls */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+  scrollbar-width: none;
+}
+.filter-bar::-webkit-scrollbar { display: none; }
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--mut);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+.filter-btn:hover { color: var(--fg); border-color: var(--card-hover-border); }
+.filter-btn[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
+/* Experience & Skills Split Layout */
+.dual-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+}
+@media (max-width: 768px) {
+  .dual-grid { grid-template-columns: 1fr; }
+}
+
+.glass-box {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+
+/* Timeline */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--card-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 28px;
+}
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--acc);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+.timeline-role { font-weight: 700; font-size: 1.05rem; }
+.timeline-company { color: var(--acc); font-weight: 600; font-size: 0.9rem; }
+.timeline-date { font-size: 0.8rem; color: var(--mut-extra); }
+.timeline-bullets {
+  margin: 8px 0 0;
+  padding-left: 16px;
+  color: var(--mut);
+  font-size: 0.9rem;
+}
+.timeline-bullets li { margin-bottom: 6px; }
+
+/* Skills List */
+.skill-group { margin-bottom: 24px; }
+.skill-group:last-child { margin-bottom: 0; }
+.skill-title { font-size: 0.85rem; font-weight: 700; color: var(--mut-extra); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+
+/* Contact CTA Block */
+.contact-card {
+  text-align: center;
+  padding: 60px 32px;
+  background: linear-gradient(180deg, var(--card-bg), var(--bg-subtle));
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  margin-top: 40px;
+}
+
+.contact-card h2 { font: 800 clamp(2rem, 4vw, 3rem) var(--hd); margin: 0 0 12px; }
+.contact-card p { color: var(--mut); max-width: 480px; margin: 0 auto 28px; }
+
+/* Custom Modal */
+dialog#dlg {
+  width: min(840px, 92vw);
+  max-height: 90vh;
+  border: 1px solid var(--card-hover-border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--fg);
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+dialog::backdrop { background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(8px); }
+
+.modal-media { aspect-ratio: 16/9; background: #000; position: relative; }
+.modal-media iframe, .modal-media img { width: 100%; height: 100%; object-fit: cover; border: 0; }
+
+.modal-thumbs {
+  display: flex;
+  gap: 10px;
+  padding: 12px 24px;
+  background: var(--bg-subtle);
+  overflow-x: auto;
+  border-bottom: 1px solid var(--card-border);
+}
+.modal-thumbs img {
+  width: 70px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.5;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+.modal-thumbs img:hover, .modal-thumbs img.active { opacity: 1; border-color: var(--acc); }
+
+.modal-content { padding: 28px; }
+.close-modal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+footer {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--mut-extra);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--card-border);
+  margin-top: 60px;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<!-- Floating Navigation Bar -->
+<header class="nav-header">
+  <nav>
+    <a class="brand" href="#top" id="brand-name">MG</a>
+    <span class="nl">
+      <a href="#projects">Work</a>
+      <a href="#about">About & Experience</a>
+      <a href="#contact">Contact</a>
+    </span>
+    <button class="tb" id="theme-toggle" type="button">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </nav>
+</header>
+
+<div class="wrap">
+  <!-- Hero Section -->
+  <header class="hero" id="top">
+    <div class="status-badge">
+      <span class="status-dot"></span>
+      <span>Available for Senior XR & Unity Roles</span>
+    </div>
+    <h1 class="hero-title" id="name">Maged Gadalla</h1>
+    <div class="role-tag" id="role">Senior Unity & XR Developer</div>
+    <p class="hero-bio" id="tagline">Crafting high-performance VR, MR, and multiplayer simulations with interactive precision.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#projects">Explore Work ↘</a>
+      <a class="btn-secondary" id="contact-btn" href="#contact">Get in Touch</a>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+    </div>
+
+    <!-- Interactive Filter Buttons -->
+    <div class="filter-bar" id="filters"></div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid" id="projects-grid"></div>
+  </section>
+
+  <!-- Dual Grid: Experience & Skills -->
+  <section id="about">
+    <div class="dual-grid">
+      <!-- Experience Column -->
+      <div class="glass-box">
+        <h2 class="section-title" style="margin-bottom: 24px;">Work Experience</h2>
+        <ol class="timeline" id="exp-timeline"></ol>
+      </div>
+
+      <!-- Skills & Tech Column -->
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="glass-box">
+          <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.4rem;">Skills & Tech</h2>
+          <div id="skills-container"></div>
+        </div>
+
+        <div class="glass-box">
+          <h2 class="section-title" style="margin-bottom: 16px; font-size: 1.4rem;">Certificates</h2>
+          <ul id="certs-list" style="padding-left: 18px; margin: 0; color: var(--mut); font-size: 0.9rem;"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact">
+    <div class="contact-card">
+      <h2>Let’s build something extraordinary.</h2>
+      <p>Interested in collaborating on a VR/MR project or hiring for your tech team?</p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;" id="contact-links"></div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p id="footer-text"></p>
+</footer>
+
+<!-- Project Modal -->
+<dialog id="dlg">
+  <button class="close-modal" onclick="document.getElementById('dlg').close()">✕</button>
+  <div id="dlg-body"></div>
+</dialog>
+
+<script>
+const $ = s => document.querySelector(s);
+let DATA = {};
+let activeTag = "";
+
+// Fetch Dynamic JSON File
+fetch("projects.json")
+  .then(r => { if (!r.ok) throw new Error("JSON not found"); return r.json(); })
+  .then(render)
+  .catch(err => {
+    console.error(err);
+    $("#projects-grid").innerHTML = `<p style="color:var(--mut);">Make sure projects.json is present and accessible via web server.</p>`;
+  });
+
+function render(d) {
+  DATA = d;
+  const p = d.profile || {};
+  const P = d.projects || [];
+
+  // Profile Information Binding
+  document.title = `${p.name || 'Maged Gadalla'} – ${p.title || 'XR Developer'}`;
+  $("#name").textContent = p.name || "Maged Gadalla";
+  $("#brand-name").textContent = (p.name || "MG").split(" ").map(n => n[0]).join("");
+  $("#role").textContent = p.title || "";
+  $("#tagline").textContent = p.tagline || p.about || "";
+  if (p.email) $("#contact-btn").href = `mailto:${p.email}`;
+
+  // Filters setup
+  const techCounts = {};
+  P.forEach(x => (x.tech || []).forEach(t => { techCounts[t] = (techCounts[t] || 0) + 1; }));
+  const topTechs = Object.keys(techCounts).sort((a, b) => techCounts[b] - techCounts[a]);
+  $("#filters").innerHTML = ["All", ...topTechs].map(t => 
+    `<button class="filter-btn" data-tech="${t === 'All' ? '' : t}" aria-pressed="${t === 'All'}">${t}</button>`
+  ).join("");
+
+  renderProjects(P);
+
+  // Skills Binding
+  $("#skills-container").innerHTML = (p.skills || []).map(s => `
+    <div class="skill-group">
+      <div class="skill-title">${s.group}</div>
+      <div class="tag-cloud">
+        ${(s.items || []).map(i => `<span class="tag-item">${i}</span>`).join("")}
+      </div>
+    </div>
+  `).join("");
+
+  // Experience Binding
+  $("#exp-timeline").innerHTML = (d.experience || []).map(e => `
+    <li class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-header">
+        <span class="timeline-role">${e.role}</span>
+        <span class="timeline-date">${e.period}</span>
+      </div>
+      <div class="timeline-company">${e.company}${e.location ? ' • ' + e.location : ''}</div>
+      <ul class="timeline-bullets">
+        ${(e.points || []).map(pt => `<li>${pt}</li>`).join("")}
+      </ul>
+    </li>
+  `).join("");
+
+  // Certificates Binding
+  $("#certs-list").innerHTML = (d.certificates || []).map(c => `
+    <li style="margin-bottom: 8px;">
+      <strong style="color:var(--fg);">${c.name}</strong> – ${c.issuer} (${c.year})
+    </li>
+  `).join("");
+
+  // Links Binding
+  const links = (p.links || []).concat(p.email ? [{ label: "Email Me", url: `mailto:${p.email}` }] : []);
+  $("#contact-links").innerHTML = links.map(l => 
+    `<a class="btn-primary" href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`
+  ).join("");
+
+  $("#footer-text").textContent = `© ${new Date().getFullYear()} ${p.name || 'Maged Gadalla'}. Built with dynamic JSON architecture.`;
+}
+
+// Render Project Cards Grid
+function renderProjects(projects) {
+  const filtered = activeTag 
+    ? projects.filter(x => (x.tech || []).some(t => t.toLowerCase() === activeTag.toLowerCase()))
+    : projects;
+
+  $("#projects-grid").innerHTML = filtered.map((x, i) => {
+    let thumbnailHtml = `<div class="project-thumb-placeholder">XR Project Preview</div>`;
+    if (x.images && x.images.length > 0) {
+      thumbnailHtml = `<img src="${x.images[0]}" alt="${x.title}" loading="lazy">`;
+    } else if (x.video) {
+      thumbnailHtml = `<img src="https://img.youtube.com/vi/${x.video}/hqdefault.jpg" alt="${x.title}" loading="lazy">`;
+    }
+
+    return `
+      <div class="project-card" onclick="openModal(${DATA.projects.indexOf(x)})">
+        <div class="project-thumb">
+          ${thumbnailHtml}
+          ${x.video ? `<span class="play-badge">▶ Video Demo</span>` : ''}
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-company">${x.company}</span>
+            <span class="project-period">${x.period}</span>
+          </div>
+          <h3 class="project-title">${x.title}</h3>
+          <p class="project-desc">${x.summary}</p>
+          <div class="tag-cloud">
+            ${(x.tech || []).slice(0, 4).map(t => `<span class="tag-item">${t}</span>`).join("")}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+// Interactive Filters Event Listener
+document.addEventListener("click", e => {
+  if (e.target.classList.contains("filter-btn")) {
+    document.querySelectorAll(".filter-btn").forEach(b => b.setAttribute("aria-pressed", "false"));
+    e.target.setAttribute("aria-pressed", "true");
+    activeTag = e.target.dataset.tech;
+    renderProjects(DATA.projects || []);
+  }
+});
+
+// Modal Display Logic
+function openModal(index) {
+  const x = DATA.projects[index];
+  if (!x) return;
+
+  let mediaHtml = '';
+  let thumbsHtml = '';
+
+  if (x.video) {
+    mediaHtml = `<iframe id="main-media" src="https://www.youtube-nocookie.com/embed/${x.video}?autoplay=1" allowfullscreen></iframe>`;
+  } else if (x.images && x.images.length > 0) {
+    mediaHtml = `<img id="main-media" src="${x.images[0]}" alt="${x.title}">`;
+  }
+
+  if (x.images && x.images.length > 0) {
+    thumbsHtml = `
+      <div class="modal-thumbs">
+        ${x.video ? `<img src="https://img.youtube.com/vi/${x.video}/hqdefault.jpg" onclick="swapMedia('video', '${x.video}', this)" class="active">` : ''}
+        ${x.images.map((img, idx) => `<img src="${img}" onclick="swapMedia('image', '${img}', this)" ${!x.video && idx === 0 ? 'class="active"' : ''}>`).join('')}
+      </div>
+    `;
+  }
+
+  $("#dlg-body").innerHTML = `
+    <div class="modal-media" id="media-box">${mediaHtml}</div>
+    ${thumbsHtml}
+    <div class="modal-content">
+      <div class="project-meta" style="margin-bottom: 6px;">
+        <span class="project-company">${x.company}</span>
+        <span class="project-period">${x.period}</span>
+      </div>
+      <h2 style="font:700 1.6rem var(--hd); margin: 0 0 12px;">${x.title}</h2>
+      <p style="color:var(--mut); margin-bottom: 16px;">${x.summary}</p>
+      <p style="margin-bottom: 16px;"><strong>Role:</strong> ${x.role}</p>
+      <div class="tag-cloud">
+        ${(x.tech || []).map(t => `<span class="tag-item">${t}</span>`).join('')}
+      </div>
+    </div>
+  `;
+  $("#dlg").showModal();
+}
+
+function swapMedia(type, src, el) {
+  const box = $("#media-box");
+  if (type === 'video') {
+    box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${src}?autoplay=1" allowfullscreen></iframe>`;
+  } else {
+    box.innerHTML = `<img src="${src}" alt="Screenshot">`;
+  }
+  document.querySelectorAll('.modal-thumbs img').forEach(img => img.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// Theme Switcher Logic
+const themeBtn = $("#theme-toggle");
+const themeIcon = $("#theme-icon");
+
+function updateThemeUI(theme) {
+  document.documentElement.dataset.theme = theme;
+  themeIcon.textContent = theme === "light" ? "☀️" : "🌙";
+}
+
+themeBtn.onclick = () => {
+  const current = document.documentElement.dataset.theme;
+  const next = current === "light" ? "dark" : "light";
+  localStorage.setItem("theme", next);
+  updateThemeUI(next);
+};
+updateThemeUI(document.documentElement.dataset.theme);
+</script>
+</body>
+</html>
