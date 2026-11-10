@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>مُولد مشاريع JSON - ماجد جادالله</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #0e0d22; color: #eceaff; padding: 20px; max-width: 800px; margin: 0 auto; }
+  h2 { color: #ffb454; border-bottom: 1px solid #2c2961; padding-bottom: 10px; }
+  .form-group { margin-bottom: 15px; }
+  label { display: block; margin-bottom: 5px; color: #a09dc8; }
+  input, textarea { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #2c2961; background: #17153a; color: #fff; box-sizing: border-box; }
+  button { background: #8b7dff; color: #0e0d22; border: none; padding: 12px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+  button:hover { background: #ffb454; }
+  pre { background: #17153a; padding: 15px; border-radius: 8px; border: 1px solid #2c2961; color: #a09dc8; overflow-x: auto; white-space: pre-wrap; direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+
+<h2>إضافة مشروع جديد إلى JSON</h2>
+
+<div class="form-group">
+  <label>اسم المشروع (Title):</label>
+  <input type="text" id="title" placeholder="مثال: Supermarket VR Simulation">
+</div>
+<div class="form-group">
+  <label>الشركة / الجهة (Company):</label>
+  <input type="text" id="company" placeholder="مثال: Arabtesting">
+</div>
+<div class="form-group">
+  <label>الفترة / التاريخ (Period):</label>
+  <input type="text" id="period" placeholder="مثال: 2025 - Present">
+</div>
+<div class="form-group">
+  <label>دورك في المشروع (Role):</label>
+  <input type="text" id="role" placeholder="مثال: Senior Unity & XR Developer">
+</div>
+<div class="form-group">
+  <label>ملخص المشروع (Summary):</label>
+  <textarea id="summary" rows="3" placeholder="وصف مختصر للمشروع..."></textarea>
+</div>
+<div class="form-group">
+  <label>التقنيات المستخدمة (مفصولة بفواصل):</label>
+  <input type="text" id="tech" placeholder="Unity, C#, XR Interaction Toolkit, Photon Fusion">
+</div>
+<div class="form-group">
+  <label>معرف فيديو يوتيوب (YouTube Video ID - اختياري):</label>
+  <input type="text" id="video" placeholder="مثال: dQw4w9WgXcQ (الكود بعد v= في الرابط)">
+</div>
+<div class="form-group">
+  <label>روابط الصور (مفصولة بفواصل - اختياري):</label>
+  <input type="text" id="images" placeholder="https://example.com/img1.jpg, https://example.com/img2.jpg">
+</div>
+
+<button onclick="generateJSON()">توليد كود JSON</button>
+<button onclick="copyToClipboard()">نسخ الكود</button>
+
+<h3>النتيجة جاهزة للنسخ إلى ملف projects.json:</h3>
+<pre id="output">// قم بتعبئة البيانات واضغط على "توليد كود JSON"</pre>
+
+<script>
+function generateJSON() {
+  const title = document.getElementById('title').value;
+  const company = document.getElementById('company').value;
+  const period = document.getElementById('period').value;
+  const role = document.getElementById('role').value;
+  const summary = document.getElementById('summary').value;
+  const techStr = document.getElementById('tech').value;
+  const video = document.getElementById('video').value;
+  const imagesStr = document.getElementById('images').value;
+
+  const techArr = techStr.split(',').map(t => t.trim()).filter(Boolean);
+  const imagesArr = imagesStr.split(',').map(i => i.trim()).filter(Boolean);
+
+  const obj = {
+    title,
+    company,
+    period,
+    role,
+    summary,
+    tech: techArr,
+    ...(video ? { video } : {}),
+    ...(imagesArr.length ? { images: imagesArr } : {})
+  };
+
+  document.getElementById('output').textContent = JSON.stringify(obj, null, 2) + ",";
+}
+
+function copyToClipboard() {
+  const text = document.getElementById('output').textContent;
+  navigator.clipboard.writeText(text).then(() => alert("تم نسخ الكود بنجاح!"));
+}
+</script>
+</body>
+</html>
