@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Certified Unity Professional",
+    "issuer": "Unity Technologies",
+    "period": "Sep 2022 – Feb 2023"
+  },
+  {
+    "name": "Unity Certified Associate Game Developer Scripting with C#",
+    "issuer": "",
+    "period": "Apr 2020 – Aug 2020"
+  },
+  {
+    "name": "Complete C# Unity Game Developer (2D–3D)",
+    "issuer": "Udacity",
+    "period": "Dec 2019"
+  },
+  {
+    "name": "VR Mobile 360 Development Nano-Degree Program",
+    "issuer": "",
+    "period": "Jul 2019"
+  },
+  {
+    "name": "VR Development Nano-Degree Program",
+    "issuer": "Udacity",
+    "period": "Jun 2018"
+  }
+]

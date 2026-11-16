@@ -1,0 +1,51 @@
+[
+  {
+    "group": "Game Engines & Core Technologies",
+    "items": [
+      "Unity 2D/3D",
+      "Unity API",
+      "XR (VR/AR/MR) Development",
+      "AR Foundation",
+      "XR Interaction Toolkit (XRI)"
+    ]
+  },
+  {
+    "group": "Programming Languages & Frameworks",
+    "items": [
+      "C#",
+      ".NET",
+      "Object-Oriented Programming (OOP)",
+      "SOLID Principles",
+      "Design Patterns"
+    ]
+  },
+  {
+    "group": "Networking & Multiplayer",
+    "items": [
+      "Photon PUN 2",
+      "Photon Fusion",
+      "Multiplayer Game Architecture",
+      "RPC Synchronization"
+    ]
+  },
+  {
+    "group": "Tools & Version Control",
+    "items": [
+      "Git",
+      "GitLab",
+      "Plastic (Unity Version Control)",
+      "SourceTree",
+      "Visual Studio Code"
+    ]
+  },
+  {
+    "group": "Optimization & Design",
+    "items": [
+      "Performance Profiling",
+      "Asset Optimization",
+      "Memory Management",
+      "UI/UX Implementation",
+      "3D Asset Integration"
+    ]
+  }
+]

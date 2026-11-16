@@ -1,0 +1,1 @@
+Copy your supplied CV PDF into this folder and name it Maged-Gadalla-CV.pdf, or update resumeUrl in data/profile.json / Admin Dashboard.

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "arabtesting",
+    "role": "Unity Developer",
+    "company": "ArabTesting",
+    "period": "Nov 2025 – Present",
+    "location": "Cairo, Egypt",
+    "description": [
+      "Spearhead the architecture and technical development of advanced Virtual Reality (VR) and Mixed Reality (MR) simulations, defining the technical stack using the Meta XR All-in-One SDK.",
+      "Designed and implemented a decoupled vehicle control system for a VR space simulation using the Strategy Design Pattern, separating input execution from locomotion behaviors to enable multi-method navigation.",
+      "Engineered a highly scalable core gameplay system utilizing a custom Command Pattern and hierarchical State Machine, establishing robust global state management and precise undo/redo systems.",
+      "Integrated Meta Voice SDK to build immersive, low-latency Mixed Reality voice-driven interactions, configuring optimized NLP models for bilingual (Arabic and English) voice detection within spatial computing environments.",
+      "Direct performance profiling and memory management workflows, leveraging architectural optimization to secure stable frame rates on standalone VR hardware (Meta Quest 2, Quest 3)."
+    ]
+  },
+  {
+    "id": "almotahida",
+    "role": "Unity Developer",
+    "company": "Almotahida Education Group",
+    "period": "Feb 2023 – Nov 2025",
+    "location": "Cairo, Egypt",
+    "description": [
+      "Drive the full software development life cycle (SDLC) for immersive Virtual Reality (VR) applications and 2D/3D interactive educational games, aligning technical execution with product line requirements.",
+      "Architect scalable interactive systems, game mechanics, and pedagogical scenarios using Unity and C#, enhancing software stability and code reusability across multiple platforms.",
+      "Collaborate with Quality Assurance (QA) teams to execute profiling and debugging workflows, eliminating critical runtime errors and maximizing cross-device usability for mixed dimensions (2D, 3D, and VR)."
+    ]
+  },
+  {
+    "id": "lessonaira",
+    "role": "Unity Developer (Part-Time)",
+    "company": "Lessonaira",
+    "period": "May 2022 – Aug 2022",
+    "location": "",
+    "description": [
+      "Engineered core gameplay mechanics and features for a large-scale, multiplayer educational game featuring Battle Royale systems and real-time player synchronization.",
+      "Integrated REST APIs to handle dynamic game data, bridging communication between the Unity client and backend cloud services.",
+      "Implemented secure user authentication systems using OAuth 2.0, enabling seamless and robust Google and Facebook third-party login flows."
+    ]
+  },
+  {
+    "id": "futurecore",
+    "role": "Unity Developer",
+    "company": "FutureCORE",
+    "period": "Feb 2022 – Feb 2023",
+    "location": "Cairo, Egypt",
+    "description": [
+      "Developed core architecture and script logic for a real-time farming simulation game, managing complex resource states and time-dependent mechanics.",
+      "Integrated a proprietary, customized API to synchronize user progression, inventory systems, and real-time game states with the database backend.",
+      "Executed geometric scene layout configurations and contributed to level design, improving overall rendering performance and scene transition efficiency."
+    ]
+  }
+]

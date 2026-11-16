@@ -1,0 +1,24 @@
+{
+  "name": "Maged Gadalla",
+  "role": "Senior Unity & XR Software Engineer",
+  "headline": "Building immersive experiences, real-time systems, and interactive worlds.",
+  "location": "Cairo, Egypt",
+  "email": "Magdgadalh1998@gmail.com",
+  "phone": "01558790144",
+  "experienceSummary": "4+ years",
+  "about": "Senior Unity & XR (VR/AR/MR) Software Engineer with over 4 years of professional expertise in designing, architecting, and deploying complex interactive simulations, real-time networking systems, and multiplayer games. Advanced proficiency in C#, computational design patterns, and cross-platform XR hardware performance optimization. Expert in implementing clean code principles, establishing robust software architecture, and leading engineering workflows within Agile/Scrum environments to deliver scalable, enterprise-grade spatial computing applications.",
+  "resumeUrl": "assets/documents/Maged-Gadalla-CV.pdf",
+  "availability": "Open to interesting opportunities",
+  "socials": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/",
+      "enabled": true
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/",
+      "enabled": true
+    }
+  ]
+}

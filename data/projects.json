@@ -1,0 +1,72 @@
+[
+  {
+    "id": "project-multitour",
+    "title": "Multi Tour",
+    "category": "VR / Multiplayer",
+    "summary": "A real-time, networked multiplayer VR tourism simulation game developed as a graduation project.",
+    "description": "A multiplayer virtual reality tourism simulation focused on shared exploration and real-time networking.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "VR",
+      "Multiplayer Networking"
+    ],
+    "image": "",
+    "videoUrl": "",
+    "projectUrl": "",
+    "featured": true
+  },
+  {
+    "id": "project-xr-simulation",
+    "title": "VR & Mixed Reality Simulations",
+    "category": "XR / Simulation",
+    "summary": "Immersive VR and MR simulation systems with modular interaction and optimized standalone-device performance.",
+    "description": "Architecture and development work involving Meta XR SDK, interaction systems, voice-driven experiences, and performance optimization.",
+    "technologies": [
+      "Unity",
+      "Meta XR SDK",
+      "C#",
+      "Design Patterns",
+      "Meta Quest 2/3"
+    ],
+    "image": "",
+    "videoUrl": "",
+    "projectUrl": "",
+    "featured": true
+  },
+  {
+    "id": "project-educational",
+    "title": "Interactive Educational Games",
+    "category": "Games / Education",
+    "summary": "2D/3D interactive educational games and immersive VR learning experiences.",
+    "description": "Scalable gameplay systems and pedagogical scenarios designed for cross-device usability.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "XR Interaction Toolkit",
+      "2D/3D"
+    ],
+    "image": "",
+    "videoUrl": "",
+    "projectUrl": "",
+    "featured": true
+  },
+  {
+    "id": "project-multiplayer",
+    "title": "Multiplayer Educational Game",
+    "category": "Multiplayer / Backend",
+    "summary": "Large-scale educational multiplayer game featuring Battle Royale systems and real-time player synchronization.",
+    "description": "Gameplay systems integrated with REST APIs and OAuth 2.0 authentication flows.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "REST API",
+      "OAuth 2.0",
+      "Networking"
+    ],
+    "image": "",
+    "videoUrl": "",
+    "projectUrl": "",
+    "featured": false
+  }
+]
