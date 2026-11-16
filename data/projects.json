@@ -53,10 +53,10 @@
   },
   {
     "id": "project-multiplayer",
-    "title": "Multiplayer Educational Game",
+    "title": "Educational Multiplayer Battle Royale",
     "category": "Multiplayer / Backend",
-    "summary": "Large-scale educational multiplayer game featuring Battle Royale systems and real-time player synchronization.",
-    "description": "Gameplay systems integrated with REST APIs and OAuth 2.0 authentication flows.",
+    "summary": "A student-focused multiplayer battle royale with a full character loop — combat, equipment, inventory, and store — built on a codebase migrated from monolithic to six independent, tested assembly-definition modules (Localization, PlayerCore, Sync, Network, UIView, WebView).",
+    "description": "My contribution\n\nMigrated the codebase into modular, independently testable assemblies\nCut cold-start load time from 24–26s to 4–6s and reduced build size ~20%\nBuilt the battle-royale character systems: combat, equipment, inventory, store\nIntegrated RESTful APIs via UnityWebRequest and built a WebView system for an external education platform\nWorked across level design and UI development during the project's lifetime",
     "technologies": [
       "Unity",
       "C#",
@@ -67,6 +67,6 @@
     "image": "",
     "videoUrl": "",
     "projectUrl": "",
-    "featured": false
+    "featured": "true"
   }
 ]
