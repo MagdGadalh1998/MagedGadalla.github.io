@@ -17,24 +17,6 @@
     "featured": "true"
   },
   {
-    "id": "project-xr-simulation",
-    "title": "VR & Mixed Reality Simulations",
-    "category": "XR / Simulation",
-    "summary": "Immersive VR and MR simulation systems with modular interaction and optimized standalone-device performance.",
-    "description": "Architecture and development work involving Meta XR SDK, interaction systems, voice-driven experiences, and performance optimization.",
-    "technologies": [
-      "Unity",
-      "Meta XR SDK",
-      "C#",
-      "Design Patterns",
-      "Meta Quest 2/3"
-    ],
-    "image": "",
-    "videoUrl": "",
-    "projectUrl": "",
-    "featured": true
-  },
-  {
     "id": "project-educational",
     "title": "Interactive Educational Games",
     "category": "Games / Education",
