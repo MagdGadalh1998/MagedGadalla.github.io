@@ -68,5 +68,25 @@
     "videoUrl": "",
     "projectUrl": "",
     "featured": "true"
+  },
+  {
+    "title": "Mazraaty - 3D Farming Simulation Game",
+    "category": "3D Games",
+    "summary": "An interactive 3D farming simulation game built in Unity featuring a custom spatial grid system and full-stack RESTful API backend synchronization.",
+    "description": "Developed a feature-rich 3D farming simulation game in Unity featuring seamless frontend-backend communication, real-time data persistence, and precise spatial land management.\n\nKey Features & Architecture:\n• Dynamic Grid System: Engineered a custom grid-based land partitioning system allowing players to dynamically plow empty plots, select coordinate-based tiles, plant various crops (carrots, wheat, tomatoes), and manage farm layouts.\n• Backend & API Integration: Integrated RESTful APIs to handle user authentication (Sign In/Sign Up), real-time game state synchronization, and profile management.\n• Database Persistence: Connected a backend database to securely store and retrieve player inventory, crop growth progress, virtual currency, and XP levels across sessions.\n• Gameplay Mechanics: Implemented crop growth timers, leveling systems, item/pesticide usage affecting yield, and dynamic UI panels.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "RESTful API",
+      "Grid System",
+      "Spatial Mapping",
+      "Backend Integration",
+      "UI Toolkit"
+    ],
+    "image": "https://commonsensegamer.com/wp-content/uploads/2023/01/best-farming-games-to-play-on-PC.jpg",
+    "videoUrl": "https://www.youtube.com/watch?v=9x1g15v958k",
+    "projectUrl": "https://www.youtube.com/watch?v=9x1g15v958k",
+    "featured": "true",
+    "id": "projects-1794908850577"
   }
 ]
