@@ -118,5 +118,25 @@
     "projectUrl": "https://www.youtube.com/watch?v=PwSlH-WKBJM",
     "featured": "true",
     "id": "projects-1794923015628"
+  },
+  {
+    "title": "Trivia Snakes & Ladders - Interactive Educational Board Game",
+    "category": "2D Games / Game Development / Casual Games ",
+    "summary": "An interactive digital Snakes & Ladders board game built in Unity, combining traditional gameplay with educational trivia quizzes and multi-player modes.",
+    "description": "Developed an interactive educational board game in Unity fusing the classic Snakes & Ladders mechanics with trivia quizzes to test and reinforce knowledge during gameplay.\n\nKey Features & Architecture:\n• Board Grid System & Movement: Programmed a coordinate-based grid map with smooth token traversal, handling ladders, snakes, and dice roll mechanics.\n• Interactive Quiz Integration: Engineered popup trivia challenge systems that trigger during player progression, requiring correct answers to advance.\n• Game Modes: Implemented both Single-Player and Multi-Player interface options for engaging local matches.\n• Tools & Technologies: Unity, C#, UI Canvas & Toolkit, Game State Management, Interactive Board Logic.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "Board Game Logic",
+      "Grid System",
+      "UI Toolkit",
+      "Interactive Quizzes",
+      "Multiplayer Modes"
+    ],
+    "image": "https://thumbs.dreamstime.com/b/ladder-snakes-game-funny-frame-children-ladder-snakes-game-funny-frame-children-vector-illustration-151377138.jpg?w=576",
+    "videoUrl": "https://www.youtube.com/watch?v=lvfdUb2RFyM",
+    "projectUrl": "https://www.youtube.com/watch?v=lvfdUb2RFyM",
+    "featured": "",
+    "id": "projects-1794924056050"
   }
 ]
