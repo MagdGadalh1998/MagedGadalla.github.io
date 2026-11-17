@@ -17,23 +17,6 @@
     "featured": "true"
   },
   {
-    "id": "project-educational",
-    "title": "Interactive Educational Games",
-    "category": "Games / Education",
-    "summary": "2D/3D interactive educational games and immersive VR learning experiences.",
-    "description": "Scalable gameplay systems and pedagogical scenarios designed for cross-device usability.",
-    "technologies": [
-      "Unity",
-      "C#",
-      "XR Interaction Toolkit",
-      "2D/3D"
-    ],
-    "image": "",
-    "videoUrl": "",
-    "projectUrl": "",
-    "featured": true
-  },
-  {
     "id": "project-multiplayer",
     "title": "Educational Multiplayer Battle Royale",
     "category": "Multiplayer / Backend",
