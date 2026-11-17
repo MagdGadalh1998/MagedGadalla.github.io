@@ -158,5 +158,25 @@
     "projectUrl": "https://www.youtube.com/watch?v=kWLUd6Y-mv8",
     "featured": "",
     "id": "projects-1794924648473"
+  },
+  {
+    "title": "GERD Dash - Interactive Health & Educational Maze Game",
+    "category": "2D Games / Educational Games / Casual Games",
+    "summary": "An interactive health and educational maze game built in Unity, designed to raise awareness about GERD through puzzle-solving and lifestyle-habit quizzes.",
+    "description": "Developed an interactive educational health game in Unity centered around GERD (Gastroesophageal Reflux Disease) awareness, combining maze navigation with lifestyle-habit quizzes.\n\nKey Features & Architecture:\n• Maze & Grid Navigation: Programmed pathfinding and movement mechanics allowing players to navigate characters through intricate maze layouts to reach checkpoints.\n• Interactive Health Quizzes: Integrated popup medical/lifestyle trivia questions (e.g., eating habits, food choices) that trigger dynamically during gameplay to test and educate users.\n• Game State & UI Management: Designed clean, kid-friendly UI panels, timer countdowns, score tracking, and victory/completion screens.\n• Tools & Technologies: Unity, C#, UI Toolkit, Game State Management, Interactive Puzzle Logic.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "Educational Games",
+      "Gamification",
+      "UI Toolkit",
+      "Interactive Quizzes",
+      "Maze Logic"
+    ],
+    "image": "https://img.magnific.com/premium-vector/game-zone-text-effect_1241023-2177.jpg?semt=ais_hybrid&w=740&q=80",
+    "videoUrl": "https://www.youtube.com/watch?v=uD8nzI92Q3U",
+    "projectUrl": "https://www.youtube.com/watch?v=uD8nzI92Q3U",
+    "featured": "",
+    "id": "projects-1794925018977"
   }
 ]
