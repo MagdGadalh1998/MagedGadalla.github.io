@@ -35,5 +35,25 @@
     "projectUrl": "https://www.youtube.com/watch?v=9x1g15v958k",
     "featured": "true",
     "id": "projects-1794908850577"
+  },
+  {
+    "title": "AR Planets - Augmented Reality Astronomy Education Application",
+    "category": "Augmented Reality / Game Development",
+    "summary": "An immersive Augmented Reality educational application built in Unity to transform astronomy learning through interactive 3D solar system models and gamified quizzes.",
+    "description": "Developed an immersive Augmented Reality educational application built in Unity, designed to transform astronomy learning through interactive 3D solar system models and gamified quizzes.\n\nKey Features & Architecture:\n• Augmented Reality Tracking: Implemented image-tracking AR mechanics allowing users to project 3D interactive celestial bodies (Earth, Moon, Sun) directly onto physical reference markers.\n• Interactive 3D Visualizations & UI: Engineered dynamic scale animations, detailed informational panels, and spatial UI elements displaying scientific facts (diameter, mass, distance from Earth).\n• Gamified Quizzes: Integrated interactive multi-stage quizzes with real-time feedback loops to test user knowledge and reinforce learning outcomes.\n• Tools & Technologies: Unity, C#, AR Foundation / AR Core, 3D Spatial UI, Interactive Animation Systems.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "AR Foundation",
+      "ARCore",
+      "Augmented Reality",
+      "Spatial UI",
+      "Interactive Animation"
+    ],
+    "image": "https://europe1.discourse-cdn.com/unity/optimized/4X/b/f/2/bf2cd82658b4b19d5de91ba7776e51ff272e066a_2_690x381.jpeg",
+    "videoUrl": "https://www.youtube.com/watch?v=veqYWNtFjlE",
+    "projectUrl": "https://www.youtube.com/watch?v=veqYWNtFjlE",
+    "featured": "true",
+    "id": "projects-1794921705735"
   }
 ]
