@@ -138,5 +138,25 @@
     "projectUrl": "https://www.youtube.com/watch?v=lvfdUb2RFyM",
     "featured": "",
     "id": "projects-1794924056050"
+  },
+  {
+    "title": "Nevilab Amlo - Medical Gamification & Quiz Game",
+    "category": "2D Games / Educational Games / Casual Games",
+    "summary": "An interactive medical gamification and quiz game built in Unity for pharmaceutical training, combining arcade mechanics with timed medical challenges.",
+    "description": "Developed an interactive medical gamification and trivia game in Unity designed for pharmaceutical training and product awareness, fusing engaging casual arcade mechanics with professional medical assessments.\n\nKey Features & Architecture:\n• Arcade & Quiz Mechanics: Engineered gameplay loops featuring timed item collection, health metrics visualization, and interactive popup medical quizzes (\"Extra Chance\" challenges).\n• Scoring & Leaderboard System: Implemented dynamic score tracking, star-rating victory screens, and a global leaderboard to enhance user engagement and retention.\n• User Interface & State Management: Designed sleek medical-themed UI panels, smooth transition states, and responsive touch/mouse inputs.\n• Tools & Technologies: Unity, C#, UI Toolkit, Game State Management, Interactive Quiz Logic.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "Casual Games",
+      "Gamification",
+      "UI Toolkit",
+      "Interactive Quizzes",
+      "Game Logic"
+    ],
+    "image": "https://img.magnific.com/premium-vector/game-zone-text-effect_1241023-2177.jpg?semt=ais_hybrid&w=740&q=80",
+    "videoUrl": "https://www.youtube.com/watch?v=kWLUd6Y-mv8",
+    "projectUrl": "https://www.youtube.com/watch?v=kWLUd6Y-mv8",
+    "featured": "",
+    "id": "projects-1794924648473"
   }
 ]
