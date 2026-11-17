@@ -78,5 +78,25 @@
     "projectUrl": "https://www.youtube.com/watch?v=Eiz4fESokrQ",
     "featured": "true",
     "id": "projects-1794922343629"
+  },
+  {
+    "title": "Interactive AR Assembly Guide - Augmented Reality Product Manual",
+    "category": "Augmented Reality / Interactive 3D Applications",
+    "summary": "An interactive Augmented Reality product assembly guide built in Unity and Vuforia, visualizing step-by-step mechanical parts assembly in 3D space.",
+    "description": "Developed an interactive Augmented Reality (AR) product assembly and user manual application in Unity, utilizing image-tracking mechanics to guide users through physical assembly processes in real-time.\n\nKey Features & Architecture:\n• AR Image Tracking & Marker Detection: Integrated Vuforia AR SDK to track markers and accurately anchor 3D components onto physical surfaces.\n• Step-by-Step Assembly Animation: Engineered interactive sequential steps (e.g., preparing legs, showing surfaces, assembling parts) with smooth visual animations.\n• Interactive UI Panels: Designed intuitive UI controllers to switch between assembly stages, control workflows, and monitor progress.\n• Tools & Technologies: Unity, C#, Vuforia AR SDK, 3D Animation Systems, Spatial UI Toolkit.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "Vuforia",
+      "Augmented Reality",
+      "Image Tracking",
+      "Spatial UI",
+      "Interactive Animation"
+    ],
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/AR_LOGO_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled&_=20120424091158",
+    "videoUrl": "https://www.youtube.com/watch?v=5lwZ7hpU9os",
+    "projectUrl": "https://www.youtube.com/watch?v=5lwZ7hpU9os",
+    "featured": "true",
+    "id": "projects-1794922754124"
   }
 ]
