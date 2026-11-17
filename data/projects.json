@@ -58,5 +58,25 @@
     "projectUrl": "https://www.youtube.com/watch?v=veqYWNtFjlE",
     "featured": "true",
     "id": "projects-1794921705735"
+  },
+  {
+    "title": "Night at the Museum - Virtual Reality Educational Experience",
+    "category": "Virtual Reality (VR) / Educational Software",
+    "summary": "An immersive Virtual Reality educational museum simulation built in Unity to enhance student engagement through interactive spatial navigation and multimedia exhibits.",
+    "description": "Developed an immersive Virtual Reality (VR) educational museum experience in Unity, designed to enhance student engagement and knowledge retention through interactive virtual environments.\n\nKey Features & Architecture:\n• Immersive VR Navigation: Implemented a waypoint-based navigation system allowing users to smoothly teleport and explore a virtual museum gallery.\n• Interactive Multimedia Exhibits: Integrated interactive triggers allowing users to play spatial audio narrations, inspect anatomical models, and watch embedded video displays within the virtual space.\n• Game-Based Learning Principles: Engineered the experience to leverage virtual reality immersion, boosting motivation and active participation in educational contexts.\n• Tools & Technologies: Unity, C#, VR SDK, Spatial Audio, Interactive UI Systems.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "Virtual Reality",
+      "VR SDK",
+      "Spatial Audio",
+      "Interactive UI",
+      "Game-Based Learning"
+    ],
+    "image": "https://www.fusionvr.in/blog/wp-content/uploads/2024/06/Exploring-the-Technology-Behind-VR-Museum-Experiences.jpg",
+    "videoUrl": "https://www.youtube.com/watch?v=Eiz4fESokrQ",
+    "projectUrl": "https://www.youtube.com/watch?v=Eiz4fESokrQ",
+    "featured": "true",
+    "id": "projects-1794922343629"
   }
 ]
