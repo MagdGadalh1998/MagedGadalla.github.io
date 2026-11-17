@@ -98,5 +98,25 @@
     "projectUrl": "https://www.youtube.com/watch?v=5lwZ7hpU9os",
     "featured": "true",
     "id": "projects-1794922754124"
+  },
+  {
+    "title": "AR Multi-Image Tracking & Proximity Interaction",
+    "category": "Augmented Reality / Interactive 3D Applications",
+    "summary": "An advanced Augmented Reality project built in Unity and EasyAR featuring simultaneous multi-image tracking and dynamic 3D character anchoring based on physical target proximity.",
+    "description": "Developed an advanced Augmented Reality (AR) prototype in Unity utilizing the EasyAR SDK to implement simultaneous multi-image tracking and spatial anchoring.\n\nKey Features & Architecture:\n• Multi-Target Image Tracking: Configured multiple independent image markers to accurately detect and track physical cards in real-time under a single camera view.\n• Dynamic 3D Character Anchoring: Programmed spatial logic to instantiate and anchor 3D characters (such as animated models) dynamically onto recognized image targets.\n• Proximity & Interaction Handling: Engineered detection states that track the relative positions of physical markers to trigger specific in-game events or character positioning shifts.\n• Tools & Technologies: Unity, C#, EasyAR SDK, Augmented Reality, Spatial Tracking, 3D Asset Management.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "EasyAR",
+      "Augmented Reality",
+      "Multi-Image Tracking",
+      "Spatial Positioning",
+      "3D Animation"
+    ],
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/AR_LOGO_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled&_=20120424091158",
+    "videoUrl": "https://www.youtube.com/watch?v=PwSlH-WKBJM",
+    "projectUrl": "https://www.youtube.com/watch?v=PwSlH-WKBJM",
+    "featured": "true",
+    "id": "projects-1794923015628"
   }
 ]
