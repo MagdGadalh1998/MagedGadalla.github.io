@@ -178,5 +178,24 @@
     "projectUrl": "https://www.youtube.com/watch?v=uD8nzI92Q3U",
     "featured": "",
     "id": "projects-1794925018977"
+  },
+  {
+    "title": "Laser Defender - 2D Space Shooter Arcade Game",
+    "category": "2D Games /Game Development / Arcade Games",
+    "summary": "A 2D space shooter arcade game built in Unity, featuring wave-based enemy spawning, laser combat mechanics, score tracking, and dynamic UI menus.",
+    "description": "Developed a classic 2D space shooter arcade game in Unity, focusing on fast-paced combat mechanics, wave progression systems, and responsive player controls.\n\nKey Features & Architecture:\n• Wave-Based Enemy Spawning: Programmed dynamic enemy formations, movement patterns, and multi-wave difficulty scaling across multiple levels.\n• Combat & Weapon Systems: Implemented laser shooting mechanics, health/damage systems, enemy destruction effects, and score tracking.\n• UI & Menu Management: Designed clean main menu screens, interactive gameplay HUDs, pause/exit options, and dynamic \"You Win\" / Game Over states.\n• Tools & Technologies: Unity, C#, 2D Physics, UI Toolkit, Game State Management.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "2D Physics",
+      "Arcade Games",
+      "Game State Management",
+      "UI Toolkit"
+    ],
+    "image": "https://img.magnific.com/premium-vector/game-zone-text-effect_1241023-2177.jpg?semt=ais_hybrid&w=740&q=80",
+    "videoUrl": "https://www.youtube.com/watch?v=vBhbK3Ic8gE",
+    "projectUrl": "https://www.youtube.com/watch?v=vBhbK3Ic8gE",
+    "featured": "",
+    "id": "projects-1794925174306"
   }
 ]
