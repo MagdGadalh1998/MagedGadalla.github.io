@@ -2,7 +2,7 @@
   {
     "id": "project-multitour",
     "title": "MultiTour - Real-Time Multiplayer Museum Simulation Game",
-    "category": "Multiplayer Games / Software Architecture",
+    "category": "3D Games / Multiplayer Games ",
     "summary": "A multiplayer virtual tour simulation built in Unity utilizing custom backend database synchronization to mimic real-time multiplayer networking frameworks like Photon.",
     "description": "Developed a multi-user virtual museum tour simulation in Unity, engineering a custom networking and synchronization architecture without relying on traditional real-time multiplayer SDKs like Photon.\n\nKey Features & Architecture:\n• Custom State Synchronization: Implemented a database-driven server architecture where player movements, positions, and tour states are continuously sent and fetched via REST APIs to achieve synchronized multiplayer behavior.\n• Guide & Follower Modes: Designed dual-role mechanics allowing a player to act as a \"Tour Guide\" while others track movements and follow coordinate updates in real-time.\n• UI & Session Management: Built interactive welcome screens, name inputs, and multi-display / dual-screen simulation setups for testing peer coordination.\n• Tools & Technologies: Unity, C#, RESTful APIs, Backend Database Synchronization, Custom Networking Logic, UI Toolkit.",
     "technologies": [
